@@ -81,6 +81,16 @@ define Device/radxa_rock-3a
 endef
 TARGET_DEVICES += radxa_rock-3a
 
+define Device/radxa_radxa-cm3-io
+  DEVICE_VENDOR := Radxa
+  DEVICE_MODEL := CM3 IO
+  SOC := rk3566
+  SUPPORTED_DEVICES := radxa,cm3-io
+  UBOOT_DEVICE_NAME := radxa-cm3-io-rk3566
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script radxa-cm3-io | pine64-img | gzip | append-metadata
+endef
+TARGET_DEVICES += radxa_radxa-cm3-io
+
 define Device/radxa_rock-pi-4
   DEVICE_VENDOR := Radxa
   DEVICE_MODEL := ROCK Pi 4

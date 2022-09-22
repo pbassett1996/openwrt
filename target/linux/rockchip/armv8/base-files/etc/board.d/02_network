@@ -17,7 +17,8 @@ rockchip_setup_interfaces()
 	pine64,rockpro64|\
 	pine64,rockpro64-v2.1|\
 	pine64,quartz64-a|\
-	radxa,rock3a)
+	radxa,rock3a|\
+	radxa,cm3-io)
 		ucidef_set_interfaces_lan_wan 'eth0' 'eth1'
 		;;
 	rockchip,rk3568-bpi-r2pro)
