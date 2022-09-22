@@ -65,11 +65,20 @@ define U-Boot/rock-3a-rk3568
   DEPENDS:=+PACKAGE_u-boot-rock-3a-rk3568:arm-trusted-firmware-rk356x
 endef
 
+define U-Boot/radxa-cm3-io-rk3566
+  BUILD_SUBTARGET:=armv8
+  NAME:=RADXA-CM3-IO
+  BUILD_DEVICES:= \
+    radxa_cm3-io
+  DEPENDS:=+PACKAGE_u-boot-radxa-cm3-io-rk3566:arm-trusted-firmware-rk356x
+endef
+
 UBOOT_TARGETS := \
   bpi-r2-pro-rk3568 \
   evb-rk3568 \
   nanopi-r5s-rk3568 \
   quartz64-a-rk3566 \
+  radxa-cm3-io-rk3566 \
   rock-3a-rk3568
 
 
